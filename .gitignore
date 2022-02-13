@@ -1,0 +1,20 @@
+# Packages
+dist
+build
+bin
+var
+sdist
+lib
+lib64
+__pycache__
+
+# Unit test / coverage reports
+.coverage
+.tox
+.pytest_cache
+
+# Temp files
+*.swp
+
+# Virtual environments
+venv

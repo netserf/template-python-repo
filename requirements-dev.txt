@@ -1,0 +1,3 @@
+pytest
+bump2version
+black
