@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04 # ubuntu-latest (22.04) not supporting some versions of Python
     strategy:
       matrix:
         python-version: [3.6.9, 3.7, 3.8, 3.9]
