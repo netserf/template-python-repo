@@ -1,0 +1,5 @@
+pytest
+bump2version
+black
+setuptools
+wheel

@@ -19,3 +19,5 @@ package_name.egg-info
 
 # Virtual environments
 venv
+.direnv
+.envrc
