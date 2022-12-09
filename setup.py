@@ -1,29 +1,23 @@
-import io
-import os
-import re
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
-from setuptools import find_packages
-from setuptools import setup
+"""The setup script."""
 
+from setuptools import setup, find_packages
 
-def read(filename):
-    filename = os.path.join(os.path.dirname(__file__), filename)
-    text_type = type("")
-    with io.open(filename, mode="r", encoding="utf-8") as fd:
-        return re.sub(text_type(r":[a-z]+:`~?(.*?)`"), text_type(r"``\1``"), fd.read())
+with open("README.md", mode="r", encoding="utf-8") as readme_file:
+    readme = readme_file.read()
 
+with open("requirements.txt", mode="r", encoding="utf-8") as reqs_file:
+    install_requirements = reqs_file.readlines()
+
+with open("requirements_dev.txt", mode="r", encoding="utf-8") as devreqs_file:
+    test_requirements = devreqs_file.readlines()
+    test_requirements.extend(install_requirements)
 
 setup(
-    name="package_name",
-    version="0.1.0",
-    url="https://github.com/netserf/package-name",
-    license="MIT",
     author="",
     author_email="",
-    description="",
-    long_description=read("README.md"),
-    packages=find_packages(exclude=("tests",)),
-    install_requires=[],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "License :: OSI Approved :: MIT License",
@@ -34,4 +28,14 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
     ],
+    description="",
+    install_requires=install_requirements,
+    license="MIT",
+    long_description=readme,
+    name="package_name",
+    packages=find_packages(exclude=["tests"]),
+    test_suite="tests",
+    tests_require=test_requirements,
+    version="0.1.0",
+    url="",
 )
