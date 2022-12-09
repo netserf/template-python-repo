@@ -1,4 +1,4 @@
-# template-python-repo
+# template-python-repo v0.1.0
 
 [![Actions Status](https://github.com/netserf/template-python-repo/workflows/Lint/badge.svg)](https://github.com/netserf/template-python-repo/actions)
 [![Actions Status](https://github.com/netserf/template-python-repo/workflows/Tests/badge.svg)](https://github.com/netserf/template-python-repo/actions)
@@ -15,7 +15,13 @@ TODO
 
 TODO
 
-### Installation
+### Manual Installation
+
+```bash
+git clone ...
+python setup.py bdist_wheel
+pip install dist/*.whl
+```
 
 TODO
 
@@ -23,7 +29,7 @@ TODO
 
 TODO
 
-```python
+```bash
 pytest -v
 ```
 

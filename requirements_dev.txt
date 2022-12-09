@@ -1,5 +1,6 @@
-pytest
-bump2version
 black
+bump2version
+pylint
+pytest
 setuptools
 wheel
