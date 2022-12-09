@@ -5,13 +5,13 @@
 
 from setuptools import setup, find_packages
 
-with open('README.md', mode="r", encoding="utf-8") as readme_file:
+with open("README.md", mode="r", encoding="utf-8") as readme_file:
     readme = readme_file.read()
 
-with open('requirements.txt', mode="r", encoding="utf-8") as reqs_file:
+with open("requirements.txt", mode="r", encoding="utf-8") as reqs_file:
     install_requirements = reqs_file.readlines()
 
-with open('requirements_dev.txt', mode="r", encoding="utf-8") as devreqs_file:
+with open("requirements_dev.txt", mode="r", encoding="utf-8") as devreqs_file:
     test_requirements = devreqs_file.readlines()
     test_requirements.extend(install_requirements)
 
@@ -34,7 +34,7 @@ setup(
     long_description=readme,
     name="package_name",
     packages=find_packages(exclude=["tests"]),
-    test_suite='tests',
+    test_suite="tests",
     tests_require=test_requirements,
     version="0.1.0",
     url="",
