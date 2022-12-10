@@ -1,44 +1,68 @@
 # template-python-repo v0.1.0
 
+<!-- markdown-link-check-disable -->
 [![Actions Status](https://github.com/netserf/template-python-repo/workflows/Lint/badge.svg)](https://github.com/netserf/template-python-repo/actions)
 [![Actions Status](https://github.com/netserf/template-python-repo/workflows/Tests/badge.svg)](https://github.com/netserf/template-python-repo/actions)
+<!-- markdown-link-check-enable -->
 
 ## What?
 
-TODO
+TODO - Describe the functionality of this package
 
 ## Why?
 
-TODO
+TODO - Describe the motivation for this package
 
-### Usage
+## Usage
 
-TODO
+TODO - Show how to use this package
 
-### Manual Installation
+## Manual Installation
+
+TODO - Replace this section with instructions for installing this package
+
+To install this package manually, clone the repository and run the following
+commands:
 
 ```bash
-git clone ...
+git clone git@github.com:netserf/template-python-repo.git
 python setup.py bdist_wheel
-pip install dist/*.whl
+pip install $(ls dist/*.whl | tail -1)
 ```
 
-TODO
+## Testing & Linting
 
-### Testing
-
-TODO
+For tests and linting, run the following command:
 
 ```bash
 pytest -v
+pylint package_name/ tests/
+black --check package_name/ tests/
 ```
 
-## Requirements
+## Versioning
 
-- list package dependencies
+This package uses [Semantic Versioning](https://semver.org/). To make version
+updates use the following commands:
+
+```bash
+bumpversion [major|minor|patch]
+```
 
 ## Future Improvements
 
+TODO - Describe future improvements to this package
+
 ## Licence
 
-## Authors
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Attribution
+
+TODO - Provide attribution for any third-party code used in this package
+
+## Template Checkist Steps
+
+- [ ] Update all references to `package_name` with new package name
+- [ ] Update blank fields in `setup.py`
+- [ ] Remove this section from `README.md`
