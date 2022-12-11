@@ -64,5 +64,7 @@ TODO - Provide attribution for any third-party code used in this package
 ## Template Checkist Steps
 
 - [ ] Update all references to `package_name` with new package name
+- [ ] Update template-python-repo to new repo / project name
 - [ ] Update blank fields in `setup.py`
+- [ ] Update all URL references in `README.md`
 - [ ] Remove this section from `README.md`
