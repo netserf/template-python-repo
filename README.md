@@ -26,6 +26,8 @@ commands:
 
 ```bash
 git clone git@github.com:netserf/template-python-repo.git
+pip install -r requirements.txt
+pip install -e .
 python setup.py bdist_wheel
 pip install $(ls dist/*.whl | tail -1)
 ```
@@ -67,4 +69,6 @@ TODO - Provide attribution for any third-party code used in this package
 - [ ] Update template-python-repo to new repo / project name
 - [ ] Update blank fields in `setup.py`
 - [ ] Update all URL references in `README.md`
+- [ ] Run `pre-commit install` to install pre-commit hooks
+- [ ] Run `pre-commit run --all-files` to test pre-commit hooks
 - [ ] Remove this section from `README.md`
