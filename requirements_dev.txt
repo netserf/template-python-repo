@@ -1,5 +1,6 @@
 black
 bump2version
+pre-commit
 pylint
 pytest
 setuptools
