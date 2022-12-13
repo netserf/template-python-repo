@@ -1,4 +1,4 @@
-# template-python-repo v0.1.0
+# template-python-repo v0.2.0
 
 <!-- markdown-link-check-disable -->
 [![Actions Status](https://github.com/netserf/template-python-repo/workflows/Lint/badge.svg)](https://github.com/netserf/template-python-repo/actions)
