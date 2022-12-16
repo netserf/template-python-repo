@@ -28,7 +28,7 @@ jobs:
           pip install -e .
       - name: Lint with pylint
         run: |
-          pylint package_name/ tests/
+          pylint template_python_repo_package_name/ tests/
       - name: Test with pytest
         run: |
           pytest -v tests/
