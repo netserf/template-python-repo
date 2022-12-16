@@ -15,7 +15,7 @@ __pycache__
 
 # Temp files
 *.swp
-package_name.egg-info
+*.egg-info
 
 # Virtual environments
 venv

@@ -17,7 +17,7 @@ with open("requirements_dev.txt", mode="r", encoding="utf-8") as devreqs_file:
 
 setup(
     author="",
-    author_email="",
+    author_email="netserf.projects@gmail.com",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "License :: OSI Approved :: MIT License",
@@ -31,11 +31,12 @@ setup(
     description="",
     install_requires=install_requirements,
     license="MIT",
+    long_description_content_type="text/markdown",
     long_description=readme,
-    name="package_name",
+    name="template_python_repo_package_name",
     packages=find_packages(exclude=["tests"]),
     test_suite="tests",
     tests_require=test_requirements,
-    version="0.2.0",
+    version="0.2.1",
     url="",
 )
