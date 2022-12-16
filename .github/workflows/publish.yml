@@ -1,0 +1,37 @@
+name: Publish
+
+on:
+  workflow_run:
+    workflows: ["Tests"]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  build-and-publish:
+    strategy:
+      matrix:
+        python-version: [3.8]
+    runs-on: ubuntu-20.04 # ubuntu-latest (22.04) not supporting some versions of Python
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Switch to Current Branch
+        run: git checkout ${{ env.BRANCH }}
+      - name: Set up Python Environment ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt -r requirements.txt
+          pip install -e .
+      - name: Build binary wheel and a source tarball
+        run: python setup.py sdist
+      - name: Publish distribution to Test PyPI
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.TEST_PYPI_PASSWORD }}
+          repository_url: https://test.pypi.org/legacy/
