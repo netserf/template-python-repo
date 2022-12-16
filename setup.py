@@ -17,7 +17,7 @@ with open("requirements_dev.txt", mode="r", encoding="utf-8") as devreqs_file:
 
 setup(
     author="",
-    author_email="",
+    author_email="netserf.projects@gmail.com",
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "License :: OSI Approved :: MIT License",
