@@ -38,8 +38,8 @@ For tests and linting, run the following command:
 
 ```bash
 pytest -v
-pylint package_name/ tests/
-black --check package_name/ tests/
+pylint template_python_repo_package_name/ tests/
+black --check template_python_repo_package_name/ tests/
 ```
 
 ## Versioning
@@ -65,7 +65,7 @@ TODO - Provide attribution for any third-party code used in this package
 
 ## Template Checkist Steps
 
-- [ ] Update all references to `package_name` with new package name
+- [ ] Update all references to `template_python_repo_package_name` with new package name
 - [ ] Update template-python-repo to new repo / project name
 - [ ] Update blank fields in `setup.py`
 - [ ] Update all URL references in `README.md`
