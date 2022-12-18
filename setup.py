@@ -37,6 +37,6 @@ setup(
     packages=find_packages(exclude=["tests"]),
     test_suite="tests",
     tests_require=test_requirements,
-    version="0.2.2",
+    version="0.2.3",
     url="",
 )
